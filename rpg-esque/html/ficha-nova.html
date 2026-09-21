@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>RPG-esque | Nova Ficha</title>
+</head>
+<body>
+<header>
+<h1>RPG-esque</h1>
+<p>Criar nova ficha de personagem (D&amp;D)</p>
+</header>
+
+<nav>
+<a href="index.html">Início</a> |
+<a href="sobre.html">Sobre</a> |
+<a href="sistemas.html">Sistemas</a> |
+<a href="dnd-sobre.html">D&amp;D</a> |
+<a href="classes.html">Classes</a> |
+<a href="racas.html">Raças</a> |
+<a href="ficha-nova.html">Nova Ficha</a> |
+<a href="galeria.html">Galeria</a> |
+<a href="faq.html">FAQ</a> |
+<a href="contato.html">Contato</a>
+</nav>
+
+<main>
+<section>
+<h2>Dados do personagem</h2>
+<form action="#" method="post">
+
+<fieldset>
+<legend>Identificação</legend>
+
+<label for="nome">Nome do personagem:</label><br>
+<input type="text" id="nome" name="nome" placeholder="Ex.: Thalindor Folhaverde" required><br><br>
+
+<label for="jogador">Nome do jogador:</label><br>
+<input type="text" id="jogador" name="jogador" placeholder="Seu nome" required><br><br>
+
+<label for="avatar">Retrato do personagem:</label><br>
+<input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
+
+<label for="data-criacao">Data de criação da ficha:</label><br>
+<input type="date" id="data-criacao" name="data-criacao" required><br><br>
+
+<label for="cor-ficha">Cor de identificação da ficha:</label><br>
+<input type="color" id="cor-ficha" name="cor-ficha" value="#7a1f1f"><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Classe e raça</legend>
+
+<label for="classe">Classe:</label><br>
+<input type="text" id="classe" name="classe" list="lista-classes" placeholder="Digite ou escolha uma classe" required>
+<datalist id="lista-classes">
+<option value="Guerreiro">
+<option value="Mago">
+<option value="Ladino">
+<option value="Clérigo">
+<option value="Bárbaro">
+</datalist><br><br>
+
+<label for="raca">Raça:</label><br>
+<input type="text" id="raca" name="raca" list="lista-racas" placeholder="Digite ou escolha uma raça" required>
+<datalist id="lista-racas">
+<option value="Humano">
+<option value="Elfo">
+<option value="Anão">
+<option value="Halfling">
+<option value="Meio-Orc">
+</datalist><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Atributos e evolução</legend>
+
+<label for="nivel">Nível do personagem (1 a 20):</label><br>
+<input type="range" id="nivel" name="nivel" min="1" max="20" value="1"><br><br>
+
+<label for="pontos-vida">Pontos de vida máximos:</label><br>
+<input type="number" id="pontos-vida" name="pontos-vida" placeholder="Ex.: 12" min="1" required><br><br>
+
+<label for="classe-armadura">Classe de armadura (CA):</label><br>
+<input type="number" id="classe-armadura" name="classe-armadura" placeholder="Ex.: 15" min="1" required><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Status</legend>
+<p>Para cada atributo, informe o modificador e o atributo puro
+correspondente. O modificador aumenta em 1 a cada 2 pontos do
+atributo puro, começando em -10 e podendo chegar a 30.</p>
+
+<fieldset>
+<legend>Força</legend>
+<label for="mod-forca">Modificador:</label><br>
+<input type="number" id="mod-forca" name="mod-forca" min="-10" max="30" placeholder="Ex.: 3"><br><br>
+<small>
+<label for="atributo-forca">Atributo puro:</label><br>
+<input type="number" id="atributo-forca" name="atributo-forca" min="0" placeholder="Ex.: 26">
+</small>
+</fieldset>
+
+<fieldset>
+<legend>Sabedoria</legend>
+<label for="mod-sabedoria">Modificador:</label><br>
+<input type="number" id="mod-sabedoria" name="mod-sabedoria" min="-10" max="30" placeholder="Ex.: 1"><br><br>
+<small>
+<label for="atributo-sabedoria">Atributo puro:</label><br>
+<input type="number" id="atributo-sabedoria" name="atributo-sabedoria" min="0" placeholder="Ex.: 22">
+</small>
+</fieldset>
+
+<fieldset>
+<legend>Inteligência</legend>
+<label for="mod-inteligencia">Modificador:</label><br>
+<input type="number" id="mod-inteligencia" name="mod-inteligencia" min="-10" max="30" placeholder="Ex.: 5"><br><br>
+<small>
+<label for="atributo-inteligencia">Atributo puro:</label><br>
+<input type="number" id="atributo-inteligencia" name="atributo-inteligencia" min="0" placeholder="Ex.: 30">
+</small>
+</fieldset>
+
+<fieldset>
+<legend>Carisma</legend>
+<label for="mod-carisma">Modificador:</label><br>
+<input type="number" id="mod-carisma" name="mod-carisma" min="-10" max="30" placeholder="Ex.: -1"><br><br>
+<small>
+<label for="atributo-carisma">Atributo puro:</label><br>
+<input type="number" id="atributo-carisma" name="atributo-carisma" min="0" placeholder="Ex.: 18">
+</small>
+</fieldset>
+
+<fieldset>
+<legend>Destreza</legend>
+<label for="mod-destreza">Modificador:</label><br>
+<input type="number" id="mod-destreza" name="mod-destreza" min="-10" max="30" placeholder="Ex.: 2"><br><br>
+<small>
+<label for="atributo-destreza">Atributo puro:</label><br>
+<input type="number" id="atributo-destreza" name="atributo-destreza" min="0" placeholder="Ex.: 24">
+</small>
+</fieldset>
+
+<fieldset>
+<legend>Constituição</legend>
+<label for="mod-constituicao">Modificador:</label><br>
+<input type="number" id="mod-constituicao" name="mod-constituicao" min="-10" max="30" placeholder="Ex.: 4"><br><br>
+<small>
+<label for="atributo-constituicao">Atributo puro:</label><br>
+<input type="number" id="atributo-constituicao" name="atributo-constituicao" min="0" placeholder="Ex.: 28">
+</small>
+</fieldset>
+</fieldset>
+
+<fieldset>
+<legend>Inventário</legend>
+
+<fieldset>
+<legend>Objetos</legend>
+<label for="inv-objetos">Itens gerais (mochila, poções, ferramentas, suprimentos...):</label><br>
+<textarea id="inv-objetos" name="inv-objetos" rows="4" cols="40" placeholder="Ex.: Corda de 15m, 3 poções de cura, kit de disfarce"></textarea><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Armas</legend>
+<label for="inv-armas">Armas equipadas ou carregadas:</label><br>
+<textarea id="inv-armas" name="inv-armas" rows="4" cols="40" placeholder="Ex.: Espada longa, arco curto, 20 flechas"></textarea><br><br>
+</fieldset>
+
+<fieldset>
+<legend>Magias</legend>
+<p>Liste as magias conhecidas ou preparadas, organizadas por círculo (deixe em branco os círculos ainda não disponíveis para seu personagem).</p>
+
+<label for="magia-1">Círculo 1:</label><br>
+<textarea id="magia-1" name="magia-1" rows="2" cols="40" placeholder="Ex.: Mísseis Mágicos, Escudo Arcano"></textarea><br><br>
+
+<label for="magia-2">Círculo 2:</label><br>
+<textarea id="magia-2" name="magia-2" rows="2" cols="40" placeholder="Ex.: Invisibilidade, Bola de Teia"></textarea><br><br>
+
+<label for="magia-3">Círculo 3:</label><br>
+<textarea id="magia-3" name="magia-3" rows="2" cols="40" placeholder="Ex.: Bola de Fogo, Voo"></textarea><br><br>
+
+<label for="magia-4">Círculo 4:</label><br>
+<textarea id="magia-4" name="magia-4" rows="2" cols="40" placeholder="Ex.: Invocar Elemental"></textarea><br><br>
+
+<label for="magia-5">Círculo 5:</label><br>
+<textarea id="magia-5" name="magia-5" rows="2" cols="40" placeholder="Ex.: Dissipar o Bem e o Mal"></textarea><br><br>
+
+<label for="magia-6">Círculo 6:</label><br>
+<textarea id="magia-6" name="magia-6" rows="2" cols="40" placeholder="Ex.: Palavra de Poder Atordoar"></textarea><br><br>
+
+<label for="magia-7">Círculo 7:</label><br>
+<textarea id="magia-7" name="magia-7" rows="2" cols="40" placeholder="Ex.: Teletransporte"></textarea><br><br>
+</fieldset>
+</fieldset>
+
+<fieldset>
+<legend>História do personagem</legend>
+<label for="historia">Conte um pouco sobre seu personagem:</label><br>
+<textarea id="historia" name="historia" rows="5" cols="40" placeholder="Origem, motivações, segredos..."></textarea><br><br>
+</fieldset>
+
+<button type="submit">Salvar ficha na galeria</button>
+</form>
+</section>
+</main>
+
+<aside>
+<p>Depois de salva, sua ficha aparecerá na <a href="galeria.html">Galeria</a>.</p>
+</aside>
+
+<footer>
+<p>RPG-esque &mdash; criação de fichas.</p>
+</footer>
+</body>
+</html>
